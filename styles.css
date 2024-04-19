@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden; /* Impede a barra de rolagem vertical */
+    cursor: url('cursor.png'), auto; /* Define o cursor como uma espada */
+    background-image: url('fundo.gif');
+    background-size: cover; /* Redimensiona a imagem para cobrir todo o fundo */
+    background-position: center center; /* Centraliza a imagem no fundo */
+    color: #000000; /* Cor do texto branca */
+    height: 100vh; /* Define a altura do corpo como a altura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.star {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #000000; /* Cor das estrelas */
+    border-radius: 50%;
+    pointer-events: none; /* Permite que os elementos abaixo recebam eventos do mouse */
+    animation: sparkle 1s linear infinite; /* Animação das estrelas */
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profiles {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile {
+    margin: 0 10px; /* Espaçamento entre os perfis */
+    text-align: center;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #000000; /* Cor de destaque do Discord */
+    cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+}
+
+button {
+    background-color: #000000; /* Cor de destaque do Discord */
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2b2d30; /* Cor mais escura ao passar o mouse */
+}
